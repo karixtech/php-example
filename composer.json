@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/karixtech/karix-php.git"
+    }
+  ],
+  "require": {
+      "karixtech/karix-php": "0.0.1"
+    }
+}
