@@ -12,7 +12,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "karixtech/karix-php": "0.0.1"
+    "karixtech/karix-php": "0.0.2"
   }
 }
 ```
