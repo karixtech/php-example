@@ -3,8 +3,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basicAuth
 $config = Karix\Configuration::getDefaultConfiguration();
-$config->setUsername('AUTH_ID');
-$config->setPassword('AUTH_TOKEN');
+$config->setUsername('ACCOUNT_ID');
+$config->setPassword('ACCOUNT_TOKEN');
 
 $apiInstance = new Karix\Api\MessageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -16,9 +16,12 @@ $message = new Karix\Model\CreateMessage(); // Karix\Model\CreateAccount | Subac
 
 date_default_timezone_set('UTC');
 
+$message->setChannel("sms") // Use "sms" or "whatsapp"
 $message->setDestination(["+1XXX8323XXX", "+1XXX3234XXX"]);
 $message->setSource("+1XXX2321XXX");
-$message->setText("Hello Friend");
+$message->setContent([
+	"text" => "Hello Friend",
+]);
 
 try {
     $result = $apiInstance->sendMessage($message);

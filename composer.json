@@ -6,6 +6,6 @@
     }
   ],
   "require": {
-      "karixtech/karix-php": "~1.0"
+      "karixtech/karix-php": "~2.0"
     }
 }
